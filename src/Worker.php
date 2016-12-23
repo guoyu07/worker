@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: thomas
- * Date: 23.12.16
- * Time: 07:11
- */
 
 namespace ch\tebe\worker;
 
