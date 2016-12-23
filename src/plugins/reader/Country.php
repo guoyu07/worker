@@ -25,12 +25,11 @@ class Country implements ReaderInterface
      */
     public function read()
     {
-        return [
-            'CH' => 'Schweiz',
-            'DE' => 'Deutschland',
-            'AT' => 'Österreich',
-            'FL' => 'Fürstentum Liechtenstein',
-            'IT' => 'Italien'
-        ];
+        $filepath = realpath(__DIR__ . '/../../../data/countries.csv');
+        $csv = [];
+        foreach (array_map('str_getcsv', file($filepath)) as $line => $data) {
+            $csv[$data[0]] = $data[1];
+        }
+        return $csv;
     }
 }

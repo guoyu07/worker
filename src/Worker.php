@@ -44,11 +44,16 @@ class Worker
     {
         foreach ($this->config['plugins']['worker'] as $workerClass) {
             $worker = new $workerClass();
+            $id = $worker->getId();
             $keys = $worker->getKeys();
             foreach ($keys as $key) {
                 $worker->setData($key, $this->data[$key]);
             }
-            $worker->work();
+            if (null !== $id) {
+                $this->data[$id] = $worker->work();
+            } else {
+                $worker->work();
+            }
         }
     }
 
@@ -56,6 +61,9 @@ class Worker
     {
         foreach ($this->config['plugins']['writer'] as $writerClass) {
             $writer = new $writerClass();
+            foreach ($writer->getKeys() as $key) {
+                $writer->setData($key, $this->data[$key]);
+            }
             $writer->write();
         }
     }

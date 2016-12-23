@@ -19,12 +19,14 @@ class City implements ReaderInterface
      */
     public function read()
     {
-        return [
-            'CH' => 'Schweiz',
-            'DE' => 'Deutschland',
-            'AT' => 'Österreich',
-            'FL' => 'Fürstentum Liechtenstein',
-            'IT' => 'Italien'
-        ];
+        $filepath = realpath(__DIR__ . '/../../../data/cities.csv');
+        $csv = [];
+        foreach (array_map('str_getcsv', file($filepath)) as $line => $data) {
+            $csv[] = [
+                'countryCode' => $data[0],
+                'city' => $data[1]
+            ];
+        }
+        return $csv;
     }
 }

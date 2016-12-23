@@ -6,8 +6,11 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 
 use ch\tebe\worker\Worker;
 
-$params = $_GET;
+$params = [
+    'foo' => 'bar'
+];
 $config = require(__DIR__ . '/../src/config/main.php');
 
 $worker = new Worker($params, $config);
 $worker->run();
+

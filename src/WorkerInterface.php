@@ -17,6 +17,11 @@ interface WorkerInterface
     public function getKeys();
 
     /**
+     * @return string
+     */
+    public function getId();
+
+    /**
      * @param string $key
      * @param array $data
      * @return void
