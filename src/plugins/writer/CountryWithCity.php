@@ -2,29 +2,19 @@
 
 namespace ch\tebe\worker\plugins\writer;
 
-use ch\tebe\worker\WriterInterface;
+use ch\tebe\worker\AbstractWriter;
 
-class CountryWithCity implements WriterInterface
+class CountryWithCity extends AbstractWriter
 {
-    /**
-     * @var array
-     */
-    protected $data = [];
 
+    /**
+     * @return array
+     */
     public function getKeys()
     {
         return [
             'cityToCountry'
         ];
-    }
-
-    /**
-     * @param string $key
-     * @param array $data
-     */
-    public function setData($key, array $data)
-    {
-        $this->data[$key] = $data;
     }
 
     /**

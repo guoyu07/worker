@@ -2,15 +2,10 @@
 
 namespace ch\tebe\worker\plugins\worker;
 
-use ch\tebe\worker\WorkerInterface;
+use ch\tebe\worker\AbstractWorker;
 
-class CityToCountry implements WorkerInterface
+class CityToCountry extends AbstractWorker
 {
-    /**
-     * @var array
-     */
-    protected $data = [];
-
     /**
      * @return array
      */
@@ -28,15 +23,6 @@ class CityToCountry implements WorkerInterface
     public function getId()
     {
         return 'cityToCountry';
-    }
-
-    /**
-     * @param string $key
-     * @param array $data
-     */
-    public function setData($key, array $data)
-    {
-        $this->data[$key] = $data;
     }
 
     /**

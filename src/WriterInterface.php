@@ -17,7 +17,7 @@ interface WriterInterface
     public function setData($key, array $data);
 
     /**
-     * @return mixed
+     * @return void
      */
     public function write();
 }

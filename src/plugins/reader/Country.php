@@ -2,9 +2,9 @@
 
 namespace ch\tebe\worker\plugins\reader;
 
-use ch\tebe\worker\ReaderInterface;
+use ch\tebe\worker\AbstractReader;
 
-class Country implements ReaderInterface
+class Country extends AbstractReader
 {
     /**
      * @return string

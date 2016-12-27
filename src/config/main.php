@@ -10,6 +10,7 @@ return [
             'ch\tebe\worker\plugins\worker\CityToCountry'
         ],
         'writer' => [
+            'ch\tebe\worker\plugins\writer\EmptyWriter',
             'ch\tebe\worker\plugins\writer\CountryWithCity'
         ]
     ]
