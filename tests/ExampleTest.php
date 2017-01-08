@@ -12,8 +12,8 @@ class ExampleTest extends PHPUnit_Framework_TestCase
         $worker = new Worker($params, $config);
         $worker->run();
 
-        $expectedFilename = __DIR__ . '/data/countries-with-cities.txt';
-        $actualFilename = __DIR__ . '/data/output/countries-with-cities.txt';
+        $expectedFilename = realpath(__DIR__ . '/data/countries-with-cities.txt');
+        $actualFilename = realpath(__DIR__ . '/data/output/countries-with-cities.txt');
 
         $this->assertEquals(sha1_file($expectedFilename), sha1_file($actualFilename));
     }

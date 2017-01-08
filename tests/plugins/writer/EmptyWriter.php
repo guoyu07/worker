@@ -12,7 +12,7 @@ class EmptyWriter extends AbstractWriter
      */
     public function write()
     {
-        $files = glob(__DIR__ . '/../../data/output/*'); // get all file names
+        $files = glob(__DIR__ . '/../../data/output/*.txt'); // get all file names
         foreach($files as $file) {
             if(is_file($file)) {
                 unlink($file);
