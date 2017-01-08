@@ -11,5 +11,8 @@
       "ch\\tebe\\worker\\": "src",
       "ch\\tebe\\workertest\\": "tests"
     }
+  },
+  "scripts": {
+    "test": "phpunit"
   }
 }
