@@ -1,10 +1,8 @@
 <?php
 
-ini_set('display_errors', 1);
-
 use ch\tebe\worker\Worker;
 
-class ExampleTest extends \PHPUnit_Framework_TestCase
+class ExampleTest extends PHPUnit_Framework_TestCase
 {
     public function testPushAndPop()
     {
