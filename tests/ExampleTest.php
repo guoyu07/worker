@@ -4,7 +4,7 @@ use ch\tebe\worker\Worker;
 
 class ExampleTest extends PHPUnit_Framework_TestCase
 {
-    public function testPushAndPop()
+    public function testOutput()
     {
         $params = [];
         $config = require('config/main.php');
