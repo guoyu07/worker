@@ -1,4 +1,5 @@
 .DS_Store
 .idea
 /vendor
-/data/output
+tests/data/output/*
+composer.lock

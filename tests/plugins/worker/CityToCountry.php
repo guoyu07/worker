@@ -1,6 +1,6 @@
 <?php
 
-namespace ch\tebe\worker\plugins\worker;
+namespace ch\tebe\workertest\plugins\worker;
 
 use ch\tebe\worker\AbstractWorker;
 

@@ -1,0 +1,5 @@
+Österreich (AT): Wien, Bregenz, Salzburg
+Schweiz (CH): Bern, Zürich, Basel
+Deutschland (DE): München, Berlin, Hamburg
+Fürstentum Liechtenstein (FL): Vaduz
+Italien (IT): Rom, Mailand, Neapel
