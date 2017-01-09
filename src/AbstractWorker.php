@@ -9,6 +9,9 @@ abstract class AbstractWorker implements WorkerInterface
      */
     protected $data = [];
 
+    /** @var array */
+    protected $services = [];
+
     /**
      * @return array
      */
@@ -40,6 +43,23 @@ abstract class AbstractWorker implements WorkerInterface
     public function work()
     {
         return [];
+    }
+
+    /**
+     * @param string $name
+     * @return object
+     */
+    public function getService($name)
+    {
+        return $this->services[$name];
+    }
+
+    /**
+     * @return void
+     */
+    public function setServices(array $services)
+    {
+        $this->services = $services;
     }
 
 }

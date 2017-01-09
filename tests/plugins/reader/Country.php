@@ -3,6 +3,7 @@
 namespace ch\tebe\workertest\plugins\reader;
 
 use ch\tebe\worker\AbstractReader;
+use ch\tebe\workertest\services\CsvFile;
 
 class Country extends AbstractReader
 {
@@ -20,8 +21,10 @@ class Country extends AbstractReader
     public function read()
     {
         $filepath = realpath(__DIR__ . '/../../data/countries.csv');
+        /** @var CsvFile $csvFile */
+        $csvFile = $this->getService('csvFile');
         $csv = [];
-        foreach (array_map('str_getcsv', file($filepath)) as $line => $data) {
+        foreach ($csvFile->read($filepath) as $line => $data) {
             $csv[$data[0]] = $data[1];
         }
         return $csv;

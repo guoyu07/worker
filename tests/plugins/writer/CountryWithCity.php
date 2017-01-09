@@ -3,6 +3,7 @@
 namespace ch\tebe\workertest\plugins\writer;
 
 use ch\tebe\worker\AbstractWriter;
+use ch\tebe\workertest\services\CsvFile;
 
 class CountryWithCity extends AbstractWriter
 {
@@ -28,7 +29,9 @@ class CountryWithCity extends AbstractWriter
         }
 
         $filepath = __DIR__ . '/../../data/output/countries-with-cities.txt';
-        file_put_contents($filepath, implode($lines, "\n"));
+        /** @var CsvFile $csvFile */
+        $csvFile = $this->getService('csvFile');
+        $csvFile->write($filepath, $lines);
     }
 
 }

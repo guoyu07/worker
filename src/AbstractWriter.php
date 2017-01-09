@@ -9,6 +9,9 @@ abstract class AbstractWriter implements WriterInterface
      */
     protected $data = [];
 
+    /** @var array */
+    protected $services = [];
+
     /**
      * @return array
      */
@@ -31,6 +34,23 @@ abstract class AbstractWriter implements WriterInterface
      */
     public function write()
     {
+    }
+
+    /**
+     * @param string $name
+     * @return object
+     */
+    public function getService($name)
+    {
+        return $this->services[$name];
+    }
+
+    /**
+     * @return void
+     */
+    public function setServices(array $services)
+    {
+        $this->services = $services;
     }
 
 }

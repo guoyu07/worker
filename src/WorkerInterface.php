@@ -26,4 +26,10 @@ interface WorkerInterface
      * @return mixed
      */
     public function work();
+
+    /**
+     * @return void
+     */
+    public function setServices(array $services);
+
 }

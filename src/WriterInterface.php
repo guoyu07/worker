@@ -20,4 +20,10 @@ interface WriterInterface
      * @return void
      */
     public function write();
+
+    /**
+     * @return void
+     */
+    public function setServices(array $services);
+
 }

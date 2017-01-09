@@ -13,4 +13,10 @@ interface ReaderInterface
      * @return mixed
      */
     public function read();
+
+    /**
+     * @return void
+     */
+    public function setServices(array $services);
+
 }

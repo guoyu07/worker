@@ -4,6 +4,8 @@ namespace ch\tebe\worker;
 
 abstract class AbstractReader implements ReaderInterface
 {
+    /** @var array */
+    protected $services = [];
 
     /**
      * @return string
@@ -18,6 +20,23 @@ abstract class AbstractReader implements ReaderInterface
      */
     public function read()
     {
+    }
+
+    /**
+     * @param string $name
+     * @return object
+     */
+    public function getService($name)
+    {
+        return $this->services[$name];
+    }
+
+    /**
+     * @return void
+     */
+    public function setServices(array $services)
+    {
+        $this->services = $services;
     }
 
 }
