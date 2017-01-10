@@ -30,6 +30,15 @@ abstract class AbstractWorker implements WorkerInterface
 
     /**
      * @param string $key
+     * @return array
+     */
+    public function getData($key)
+    {
+        return $this->data[$key];
+    }
+
+    /**
+     * @param string $key
      * @param array $data
      */
     public function setData($key, array $data)
