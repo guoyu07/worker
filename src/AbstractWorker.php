@@ -25,7 +25,7 @@ abstract class AbstractWorker implements WorkerInterface
      */
     public function getId()
     {
-        return '';
+        return static::class;
     }
 
     /**

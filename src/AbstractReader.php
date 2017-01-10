@@ -12,7 +12,7 @@ abstract class AbstractReader implements ReaderInterface
      */
     public function getId()
     {
-        return '';
+        return static::class;
     }
 
     /**
