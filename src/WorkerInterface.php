@@ -2,7 +2,6 @@
 
 namespace ch\tebe\worker;
 
-
 interface WorkerInterface
 {
     /**

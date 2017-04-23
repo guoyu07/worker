@@ -3,3 +3,4 @@
 /vendor
 tests/data/output/*
 composer.lock
+composer.phar
