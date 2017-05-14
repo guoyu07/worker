@@ -12,8 +12,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ 
 # Set the WORKDIR to /app so all following commands run in /app
 WORKDIR /app
 
-# Copy composer files into the app directory.
-COPY composer.json composer.lock ./
+# Copy composer file into the app directory.
+COPY composer.json ./
 
 # Install dependencies with Composer.
 # --prefer-source fixes issues with download limits on Github.
