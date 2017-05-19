@@ -11,7 +11,7 @@ RUN apt-get update \
 # Set the WORKDIR to /app so all following commands run in /app
 WORKDIR /app
 
-# Copy all files into the app directory.
+# Copy all files into the app directory
 COPY . ./
 
 # Add user
@@ -24,7 +24,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ 
 
 USER newuser
 
-# Install dependencies with Composer.
+# Install dependencies with Composer
 # --prefer-source fixes issues with download limits on Github.
 # --no-interaction makes sure composer can run fully automated
 RUN composer install --prefer-source --no-interaction
