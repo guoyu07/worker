@@ -4,9 +4,7 @@ namespace ch\tebe\worker;
 
 abstract class AbstractWorker implements WorkerInterface
 {
-    /**
-     * @var array
-     */
+    /** @var array */
     protected $data = [];
 
     /** @var array */
